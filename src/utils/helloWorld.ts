@@ -1,3 +1,3 @@
-export const helloWorld = () => {
-  return Promise.resolve(console.log("Hello world"));
+export const helloWorld = (message: string) => {
+  return Promise.resolve(console.log(message));
 };
