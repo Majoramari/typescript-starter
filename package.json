@@ -1,18 +1,18 @@
 {
   "author": "MajorAmari",
   "name": "typescript-starter",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm build && node ./.mj-lib/main.js",
-    "dev": "nodemon",
+    "start": "cross-env NODE_ENV=production pnpm run build && node ./.mj-lib/bot.js",
+    "dev": "cross-env NODE_ENV=development nodemon -e js,ts --watch src --exec \"pnpm run build && pnpm run start\"",
     "build": "rimraf ./.mj-lib && tsc --skipLibCheck",
     "clear": "rimraf ./.mj-lib"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "module-alias": "^2.2.3",
-    "playwright": "^1.39.0",
     "rimraf": "^5.0.5"
   },
   "devDependencies": {
