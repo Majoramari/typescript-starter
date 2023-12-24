@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "ESNext",
     "lib": ["es6", "DOM", "DOM.Iterable"],
     "allowJs": true,
-    "outDir": ".mj-lib",
     "rootDir": "src",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "experimentalDecorators": true,
     "baseUrl": "./src",
     "paths": {
