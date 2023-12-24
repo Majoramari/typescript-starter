@@ -1,28 +1,22 @@
 {
   "author": "MajorAmari",
   "name": "typescript-starter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=production pnpm run build && node ./.mj-lib/main.js",
-    "dev": "cross-env NODE_ENV=development nodemon -e js,ts --watch src --exec \"pnpm run build && pnpm run start\"",
-    "build": "rimraf ./.mj-lib && tsc --skipLibCheck",
-    "clear": "rimraf ./.mj-lib"
+    "start": "cross-env NODE_ENV=production tsx -r dotenv/config src/main.ts",
+    "dev": "cross-env NODE_ENV=development tsx watch -r dotenv/config src/main.ts"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
-    "module-alias": "^2.2.3",
     "rimraf": "^5.0.5"
   },
   "devDependencies": {
     "@types/module-alias": "^2.0.3",
     "@types/node": "^20.8.9",
-    "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.7.0",
     "typescript": "^5.2.2"
-  },
-  "_moduleAliases": {
-    "@utils": "./.mj-lib/utils"
   }
 }
