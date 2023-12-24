@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "lib": ["ESNext"],
     "module": "ESNext",
-    "lib": ["es6", "DOM", "DOM.Iterable"],
-    "allowJs": true,
-    "rootDir": "src",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
     "strict": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
     "baseUrl": "./src",
     "paths": {
       "@utils/*": ["utils/*"]
